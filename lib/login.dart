@@ -26,7 +26,11 @@ class _LoginState extends State<Login> {
     String? username = box.read('username');
     if (username != null) {
       print("LOGIN USER ${username}");
-      Navigator.push(context, MaterialPageRoute(builder: (ctx) => HomePage()));
+
+      Future.delayed(Duration(milliseconds: 100), () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (ctx) => HomePage()));
+      });
     }
   }
 
